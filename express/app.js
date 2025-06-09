@@ -43,8 +43,9 @@ app.get('/api/characters/:id', (req, res) => {  // esta ruta se activa si te man
     }
        // si terminó el for y no encontró nada, tiramos un error 404 (no encontrado)
       return res.status(404).json({
-        error: 404,
-        message: 'Id no encontrada.', //básicamente "no hay ningún personaje con ese ID"
+         "message": "Character ID not found",
+          "error": "Bad Request",
+          "statusCode": 404
     });
   
   
